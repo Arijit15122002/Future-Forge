@@ -326,7 +326,6 @@ const ResumePreview = ({ formValues, skillObject }) => {
                     }}
                 >
                     <Download className='h-8 w-8' />
-                    <span>Download</span>
                 </div>
             </div>
         </div>
