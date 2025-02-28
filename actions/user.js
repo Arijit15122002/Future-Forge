@@ -123,22 +123,22 @@ export async function fetchCurrentUserName() {
     }
 }
 
-export const checkUserPreviouslyInOrNot = async () => {
-    const { userId } = await auth()
+// export const checkUserPreviouslyInOrNot = async () => {
+//     const { userId } = await auth()
 
-    try {    
-        const user = await db.user.findUnique({
-            where: {
-                clerkUserId: userId
-            }, 
-            select: {
-                industryInsight: true,
-            }
-        })
+//     try {    
+//         const user = await db.user.findUnique({
+//             where: {
+//                 clerkUserId: userId
+//             }, 
+//             select: {
+//                 industryInsight: true,
+//             }
+//         })
         
-        return !!user?.industryInsight; 
-    } catch (error) {
-        console.log("Error fetching current user's ", error.message)
-        throw new Error("Failed to fetch current user name");
-    }
-}
+//         return !!user?.industryInsight; 
+//     } catch (error) {
+//         console.log("Error fetching current user's ", error.message)
+//         throw new Error("Failed to fetch current user name");
+//     }
+// }

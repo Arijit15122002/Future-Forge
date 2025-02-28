@@ -54,7 +54,7 @@ const DashboardView = ({insight}) => {
     )
 
     return (
-    <div>
+    <div className='font-exo'>
         <div className='px-6 md:px-8 py-2'>
             <Badge variant='outline'>Last updated: {lastUpdateDate}</Badge>
         </div>
@@ -63,7 +63,7 @@ const DashboardView = ({insight}) => {
 
             <Card className='rounded-3xl max-h-[130px] sm:max-h-[150px] max-w-[350px] flex flex-col justify-center'>
                 <div className='flex flex-row items-start gap-4 pb-1 sm:pb-3 justify-between px-6 pt-5'>
-                    <CardTitle className='text-[0.7rem] md:text-sm font-light'>Market Outlook</CardTitle>
+                    <CardTitle className='text-[0.7rem] md:text-sm '>Market Outlook</CardTitle>
                     <OutlookIcon className={`${OutlookColor} w-4 h-4 md:w-6 md:h-6`} />
                 </div>
                 <CardContent>
@@ -74,7 +74,7 @@ const DashboardView = ({insight}) => {
 
             <Card className='rounded-3xl max-h-[120px] sm:max-h-[150px] max-w-[350px] flex flex-col justify-center'>
                 <div className='flex flex-row items-center gap-4 pb-1 sm:pb-3 justify-between px-6 pt-5'>
-                    <CardTitle className='text-[0.7rem] md:text-sm font-light'>Industry Growth</CardTitle>
+                    <CardTitle className='text-[0.7rem] md:text-sm '>Industry Growth</CardTitle>
                     <TrendingUp className={`$text-muted-foreground w-4 h-4 md:w-6 md:h-6`} />
                 </div>
                 <CardContent>
@@ -85,7 +85,7 @@ const DashboardView = ({insight}) => {
 
             <Card className='rounded-3xl max-h-[110px] sm:max-h-[150px] max-w-[350px] flex flex-col  justify-center'>
                 <div className='flex flex-row items-center gap-4 pb-1 sm:pb-3 justify-between px-6 pt-5'>
-                    <CardTitle className='text-[0.7rem] md:text-sm font-light'>Demand Level</CardTitle>
+                    <CardTitle className='text-[0.7rem] md:text-sm '>Demand Level</CardTitle>
                     <BriefcaseIcon className={`${OutlookColor} w-4 h-4 md:w-6 md:h-6 text-muted-foreground`} />
                 </div>
                 <CardContent>
@@ -96,17 +96,17 @@ const DashboardView = ({insight}) => {
 
             <Card className='rounded-3xl hidden md:block'>
                 <div className='flex flex-row items-center gap-4 pb-2 sm:pb-3 justify-between px-6 pt-7'>
-                    <CardTitle className='text-[0.7rem] md:text-sm font-light'>Preferred Top Skills</CardTitle>
+                    <CardTitle className='text-[0.7rem] md:text-sm '>Preferred Top Skills</CardTitle>
                     <Brain className='text-muted-foreground w-4 h-4 md:w-6 md:h-6' />
                 </div>
                 <CardContent>
-                    <div className='text-2xl font-bold'>
+                    <div className='text-sm md:text-2xl'>
                     {
                         insight.topSkills.map((skill, index) => (
                             <Badge 
                                 key={index}
                                 variant="secondary"
-                                className='mr-2'
+                                className='mr-2 font-normal'
                             >
                                 {skill}
                             </Badge>
@@ -121,7 +121,7 @@ const DashboardView = ({insight}) => {
         <div className='w-full px-6 mt-2 mb-4'>
             <Card className='rounded-3xl flex flex-col md:hidden w-full mx-auto'>
                 <div className='flex flex-row items-center gap-4 pb-2 sm:pb-3 justify-between px-6 pt-5'>
-                    <CardTitle className='text-[0.7rem] md:text-sm font-light'>Preferred Top Skills</CardTitle>
+                    <CardTitle className='text-[0.7rem] md:text-sm '>Preferred Top Skills</CardTitle>
                     <Brain className='text-muted-foreground w-4 h-4 md:w-6 md:h-6 ' />
                 </div>
                 <CardContent>
@@ -142,13 +142,13 @@ const DashboardView = ({insight}) => {
             </Card>
         </div>
 
-        <Card className='mx-auto w-[90%] h-[300px]'>
+        <Card className='mx-auto w-[90%] h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[380px]'>
             <CardHeader>
-                <CardTitle className='font-light'>Salary Ranges</CardTitle>
-                <CardDescription className='pt-1'>Displaying minimum, median and maximum salaries (in thousands)</CardDescription>
+                <CardTitle className=''>Salary Ranges</CardTitle>
+                <CardDescription className='pt-1 text-xs'>Displaying minimum, median and maximum salaries (in thousands)</CardDescription>
             </CardHeader>
             <CardContent>
-                <div className=' h-[180px]  md:h-[400px]'>
+                <div className='h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] xl:h-[280px]'>
                     <SalaryBarChart data={salaryData} />
                 </div>
             </CardContent>
@@ -157,7 +157,7 @@ const DashboardView = ({insight}) => {
         <div className='mt-8 flex flex-col sm:flex-row gap-4 w-[90%] mx-auto'>
             <Card className='w-full'>
                 <CardHeader className='flex flex-col gap-2'>
-                    <CardTitle className='font-light'>Key Industry Trends</CardTitle>
+                    <CardTitle className=''>Key Industry Trends</CardTitle>
                     <CardDescription>Current Trends shaping the Industry</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -176,7 +176,7 @@ const DashboardView = ({insight}) => {
 
             <Card className='w-full'>
                 <CardHeader className='flex flex-col gap-2'>
-                    <CardTitle className='font-light'>Recommended Skills</CardTitle>
+                    <CardTitle className=''>Recommended Skills</CardTitle>
                     <CardDescription>Skills to be considered to develop</CardDescription>
                 </CardHeader>
                 <CardContent>

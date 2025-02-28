@@ -8,23 +8,9 @@ import Link from 'next/link'
 import { ChevronDown, FileText, GraduationCap, LayoutDashboard, PenBox, StarsIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import { useRouter } from 'next/navigation'
-import { checkUserPreviouslyInOrNot } from '@/actions/user'
-import { useState, useEffect } from 'react';
 
 const ActualHeader = ({userExists}) => {
-
-    const [userAuthorizedForDashboard, setUserAuthorizedForDashboard] = useState()
     const router = useRouter()
-    
-    const fetchUsetAuthorization = async () => {
-        const response = await checkUserPreviouslyInOrNot()
-        console.log(response)
-        setUserAuthorizedForDashboard(response);
-    }
-
-    useEffect(() => {
-        fetchUsetAuthorization()
-    }, [userExists])
 
     return (
     <>
@@ -47,11 +33,7 @@ const ActualHeader = ({userExists}) => {
                             className=' h-[35px] w-[35px] sm:h-[40px] sm:w-[40px] lg:w-auto flex flex-row items-center justify-center rounded-xl'
                             onClick={() => {
                                 if( userExists ) {
-                                    if( checkUserPreviouslyInOrNot() ) {
-                                        router.push('/dashboard')
-                                    } else {
-                                        router.push('/onboarding')
-                                    }
+                                    router.push('/dashboard')
                                 }
                             }}
                         >

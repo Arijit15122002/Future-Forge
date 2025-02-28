@@ -13,7 +13,6 @@ export default {
 			mono: ["var(--font-geist-mono)", "monospace"],
 			exo: ["var(--font-exo)", "sans-serif"],
 			kanit: ["var(--font-kanit)", "sans-serif"],
-			protest: ["var(--font-protest-guerrilla)", "cursive"],
 			comfortaa: ["var(--font-comfortaa)", "cursive"],
 			audiowide: ["var(--font-audiowide)", "cursive"],
 			pacifico: ["var(--font-pacifico)", "cursive"],

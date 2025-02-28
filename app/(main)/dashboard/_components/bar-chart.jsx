@@ -4,8 +4,11 @@ import React from "react"
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Rectangle } from "recharts"
 
 const SalaryBarChart = ({data}) => {
+
+    console.log(data)
+
     return (
-    <div className="text-[0.8rem] md:text-[0.9rem]">
+    <div className="text-[0.8rem] w-full h-full">
         <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data}>
                 <defs>

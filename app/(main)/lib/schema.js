@@ -9,10 +9,10 @@ export const onboardingSchema = z.object({
     }), 
     bio: z.string().max(500).optional(),
     experience: z
-    .string()
-    .transform((val) => parseInt(val, 10))
-    .pipe(
-        z
+        .string()
+        .transform((val) => parseInt(val, 10))
+        .pipe(
+            z
             .number()
             .min(0, "Experience must be at least 0 years")
             .max(50, "Experience must be at most 50 years")

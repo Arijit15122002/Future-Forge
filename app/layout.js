@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Exo, Kanit, Protest_Guerrilla, Comfortaa, Audiowide, Pacifico, Playfair_Display, Cormorant, PT_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Exo, Kanit, Comfortaa, Audiowide, Pacifico, Playfair_Display, Cormorant, PT_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header/header-wrapper";
@@ -27,12 +27,6 @@ const exo = Exo({
     subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Add all the Kanit weights
     style: ["normal", "italic"], // Include both normal and italic styles
-  });
-  
-  const protestGuerrilla = Protest_Guerrilla({
-    variable: "--font-protest-guerrilla",
-    subsets: ["latin"],
-    weight: ["400"], // Protest Guerrilla only has weight 400
   });
 
   const comfortaa = Comfortaa({
@@ -89,7 +83,7 @@ export default function RootLayout({ children }) {
     >
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${exo.variable} ${kanit.variable} ${protestGuerrilla.variable} ${comfortaa.variable} ${audiowide.variable} ${pacifico.variable} ${playfair.variable} ${cormorant.variable} ${ptSerif.variable}`}
+                className={`${geistSans.variable} ${geistMono.variable} ${exo.variable} ${kanit.variable} ${comfortaa.variable} ${audiowide.variable} ${pacifico.variable} ${playfair.variable} ${cormorant.variable} ${ptSerif.variable}`}
             >
                 <ThemeProvider
                     attribute="class"
