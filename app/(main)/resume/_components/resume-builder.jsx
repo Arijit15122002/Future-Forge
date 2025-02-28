@@ -51,9 +51,9 @@ const ResumeBuilder = ({initialContent}) => {
     const skills = watch('skills');
     console.log(formValues);
     
-    useEffect(() => {
-        onAddingSkills(formValues?.skills)
-    }, [])
+    // useEffect(() => {
+    //     onAddingSkills(formValues?.skills)
+    // }, [])
 
     const {
         loading: isSaving,
